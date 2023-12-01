@@ -18,7 +18,7 @@ export default function (props: PuzzleResultProps) {
                 props.error
                     ? (
                         <>
-                            <small>Error</small>
+                            <small className='--error'>Error</small>
                             <br />
                             <p>{props.error}</p>
                         </>
