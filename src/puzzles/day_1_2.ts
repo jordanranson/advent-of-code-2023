@@ -14,17 +14,18 @@ const output = '281'
 
 // Utilities
 
-const wordNumberMap: Record<string, string> = {
-    'one': '1',
-    'two': '2',
-    'three': '3',
-    'four': '4',
-    'five': '5',
-    'six': '6',
-    'seven': '7',
-    'eight': '8',
-    'nine': '9',
-}
+const numberWords = [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+]
 
 // Puzzle
 
@@ -33,11 +34,17 @@ const puzzle: Puzzle = {
     output,
     
     async iterate (current) {
-        const regexp = new RegExp(`(?=([0-9]|${Object.keys(wordNumberMap).join('|')}))`, 'g')
+        const regexp = new RegExp(`(?=([0-9]|${numberWords.join('|')}))`, 'g')
 
         const matches = Array.from(
             current.matchAll(regexp),
-            value => wordNumberMap[value[1]] as string || value[1]
+            value => (
+                !!Number(value[1]) 
+                    ? value[1] 
+                    : numberWords
+                        .indexOf(value[1])
+                        .toString()
+            )
         )
 
         return matches[0] + matches[matches.length - 1]
