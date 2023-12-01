@@ -61,7 +61,7 @@ export default function (props: PuzzleResultProps) {
             }
             <footer>
                 <a 
-                    href={`https://github.com/jordanranson/advent-of-code-2023/blob/main/src/puzzles/day_${props.puzzleId[0] + 1}_${props.puzzleId[1] + 1}.ts`}
+                    href={`https://github.com/jordanranson/advent-of-code-2023/blob/trunk/src/puzzles/day_${props.puzzleId[0] + 1}_${props.puzzleId[1] + 1}.ts`}
                     target='_blank'
                     rel='noopener noreferrer'
                 >
