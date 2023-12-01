@@ -1,0 +1,66 @@
+#root
+    display: flex
+    min-height: 100vh
+
+/* Header */
+
+#root > aside > header,
+#root > main > header
+    padding: var(--spacing) 0
+    font-size: var(--fontSizeSm)
+
+/* Aside */
+
+#root > aside
+    padding: 0 var(--spacingMd)
+    background-color: var(--bgColorAlt)
+
+    > header
+        line-height: 1.2
+
+    > section
+        ul
+            font-size: var(--fontSizeSm)
+
+        li
+            line-height: 2
+
+        a[data-active='true']
+            opacity: 0.5
+            text-decoration: none
+            cursor: default
+
+/* Main */
+
+#root > main
+    flex: 1
+    padding: 0 var(--spacingLg)
+
+    > header
+        text-align: right
+        margin-bottom: 100px
+
+    > section
+        max-width: 400px
+        margin: 0 auto
+
+    > section > div
+        margin: var(--spacing) 0
+
+    textarea
+        width: 100%
+        min-height: 200px
+        border: none
+        padding: 0
+        margin: 0
+        margin-top: var(--spacingSm)
+        background: transparent
+        font-size: var(--fontSizeSm)
+        font-family: var(--fontFamily)
+        font-weight: var(--fontWeight)
+        color: var(--fontColor)
+        resize: none
+        outline: none
+
+        &[data-disabled='true']
+            opacity: 0.5

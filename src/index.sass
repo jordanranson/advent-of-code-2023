@@ -1,0 +1,74 @@
+:root 
+    --deepPurple: #211C55
+    --deepPurpleDark: #161244
+    --white: #FFFFFF
+    --offWhite: #B9B6DB
+    --red: #F0475E
+    --green: #86FF4D
+    --offGreen: #63B050
+    --blue: #00DDFF
+
+    --bgColor: var(--deepPurple)
+    --bgColorAlt: var(--deepPurpleDark)
+    --fontColor: var(--offWhite)
+    --fontColorStrong: var(--white)
+    --linkColor: var(--green)
+    --successColor: var(--green)
+    --errorColor: var(--red)
+    --warningColor: var(--blue)
+    --borderColor: var(--offGreen)
+
+    --spacingSm: 0.4rem
+    --spacing: 1rem
+    --spacingMd: 1.6rem
+    --spacingLg: 2.4rem
+
+    --fontSizeTiny: 12px
+    --fontSizeSm: 16px
+    --fontSize: 18px
+    --fontSizeMd: 24px
+    --fontSizeLg: 48px
+
+    --fontWeight: 300
+    --fontWeightMedium: 500
+    --fontWeightStrong: 700
+
+::selection
+    background-color: var(--offWhite)
+    color: var(--deepPurple)
+
+body 
+    font-family: 'Overpass Mono', monospace
+    line-height: 1.4
+    font-weight: var(--fontWeight)
+    font-size: var(--fontSize)
+    letter-spacing: -0.05em
+
+    color-scheme: dark
+    color: var(--fontColor)
+    background-color: var(--bgColor)
+
+    font-synthesis: none
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+a[href] 
+    color: var(--linkColor)
+    font-weight: var(--fontWeightStrong)
+    text-decoration: underline
+
+strong 
+    color: var(--fontColorStrong)
+    font-weight: var(--fontWeightStrong)
+
+small 
+    font-size: var(--fontSizeTiny)
+    letter-spacing: 0.05em
+    font-weight: var(--fontWeight)
+    text-transform: uppercase
+
+h1 
+    font-size: var(--fontSizeMd)
+    font-weight: var(--fontWeightStrong)
+    color: var(--fontColorStrong)

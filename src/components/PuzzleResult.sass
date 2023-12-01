@@ -1,0 +1,39 @@
+.PuzzleResult
+    padding: var(--spacingMd)
+    border: solid 1px var(--borderColor)
+
+    div
+        display: flex
+
+        > p
+            margin-right: var(--spacingMd)
+
+    small
+        display: inline-block
+        padding: 7px 8px 4px 8px
+        line-height: 1
+        margin-bottom: var(--spacing)
+        color: var(--bgColor)
+
+        &.--success
+            background-color: var(--successColor)
+
+        &.--error
+            background-color: var(--errorColor)
+
+        &.--warning
+            background-color: var(--warningColor)
+
+    span
+        font-size: var(--fontSizeMd)
+
+    footer
+        font-size: var(--fontSizeTiny)
+        display: flex
+        margin-top: var(--spacing)
+
+        aside
+            margin-left: auto
+
+        a
+            display: inline-block
